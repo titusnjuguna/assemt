@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>CSV Reconcile</title>
+</head>
+<body>
+<p>Upload two CSV files for reconciliation:</p>
+<div class="file-upload">
+    <form class="inline-form" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button type="submit" >Reconcile Files</button>
+    </form>
+</div>
+<br>
+
+<style>
+body {
+  font-family: sans-serif;
+}
+
+.file-upload {
+  margin-bottom: 10px;
+}
+
+.file-upload label {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+.file-upload input[type="file"] {
+  padding: 5px;
+  border: 1px solid #ddd;
+}
+.inline-form {
+      display: flex;
+      gap: 10px; /* Adjust the gap between elements */
+    }
+
+button {
+  /* padding: 5px 5px 5px 5px; */
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+</style>
+
+</body>
+</html>
